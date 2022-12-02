@@ -1,6 +1,7 @@
 import { HashRouter, Routes, Route, } from 'react-router-dom';
 import './App.css'
-import { useSelector } from 'react-redux';// se importan estos hooks para usar el boton onClick (useDispatch) y para mostrar en componentes (useSelector)
+// import './index.css'
+// se importan estos hooks para usar el boton onClick (useDispatch) y para mostrar en componentes (useSelector)
 // import { increment } from './store/slices/counter.slice';
 import Character from './components/Character';
 import CharacterDetails from './components/CharacterDetails';
@@ -27,12 +28,13 @@ function App() {
      <Routes>
     
       {/* Entre ROUTES Y Route no colocar ningún dato */}
-      
-      <Route element={<ProtectedRoutes/>}></Route>
-      <Route path='/character' element={<Character/>}></Route>
-      <Route path='/character/:id' element={<CharacterDetails/>}></Route>
-      
       <Route path='/' element={<Home></Home>}></Route>
+      
+      <Route element={<ProtectedRoutes/>}>
+      <Route path='/character' element={<Character/>}/>
+      <Route path='/character/:id' element={<CharacterDetails/>}/>
+      </Route>
+
      </Routes>
       {/* <button onClick={userDispatch}>press</button> */}
      </HashRouter>

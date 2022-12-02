@@ -1,4 +1,4 @@
- :root {
+ /* :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -8,7 +8,7 @@
   color: rgba(94, 88, 88, 0.87);
   width: 100%;
   
-}
+} */
 
 /* *{
   margin: 0;
@@ -24,16 +24,49 @@
 } */ 
 
 .content{
-  color: #8bf78b;
+  color: #000000;
+  display: flex;
+  /* border: 3px solid yellow; */
+  justify-content: center; 
   max-height: 0;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0,1,0,1);
+  
 }
-
 .content.show{
   height: auto;
-  max-height: 999px;
+  /* border: 3px solid red; */
+  max-height: 9990px;
   transition: all 0.5s cubic-bezier(1,0,1,0);
+}
+
+.dropdown{
+  list-style: none;
+  background: rgb(164,191,219);
+background: linear-gradient(240deg, rgba(164,191,219,1) 38%, rgba(164,208,219,1) 47%, rgba(238,234,231,1) 230%);
+  width: 180px;
+  height: auto;
+  margin: 20px;
+  font-weight: 500;
+  border: 2px solid rgb(86, 84, 88);
+  border-radius: 18px;
+  text-align: center;
+  padding: 3px;
+}
+
+.contain_progress{
+  /* border: 1px solid rgba(66, 165, 252, 0.75); */
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 12px;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 500;
+  background: rgb(164,191,219);
+background: linear-gradient(240deg, rgba(164,191,219,1) 38%, rgba(164,208,219,1) 47%, rgba(238,234,231,1) 66%);
 }
 
 .pokedex-container{
@@ -43,12 +76,25 @@
   align-items: center;
   border: 2px solid blue;
   width: 100%;
-  background-color: rgba(238, 215, 9, 0.904);
+  background: rgb(244,244,249);
+background: linear-gradient(120deg, rgba(244,244,249,1) 33%, rgba(227,227,239,1) 70%);
 }
 
 .list-poke{
-  background-color:rgb(158, 175, 175);
-  /* height: 50px;
+  /* background-color:rgb(220, 92, 7); */
+ border-radius: 70px;
+ width: 1200px; 
+ display: inline-flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin: 10px;
+ background: rgb(221,92,22);
+background: linear-gradient(280deg, rgba(221,92,22,1) 40%, rgb(50, 47, 45) 60%);
+/* background: rgb(221,92,22);
+bac kground: linear-gradient(107deg, rgba(221,92,22,1) 26%, rgba(216,230,49,1) 66%); */
+ /* height: 50px;
+
   display: flex;
   align-items: center; */
   
@@ -60,16 +106,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 5px;
 }
 
 .count{
-  background-color: thistle;
-  color: rgb(109, 133, 133);
-  width: 70px;
+  background-color: rgb(17, 16, 14);
+  color: rgb(236, 244, 244);
+  width: 100%;
   text-align: center;
-  border-radius: 10px;
-  justify-content: space-around;
-  width: 1200px;
+  font-size: 20px;
+  border-radius: 70px;
+  padding: 5px;
+  margin: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1080px;
 }
 
 .cover-details{
@@ -79,14 +131,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(200deg, rgb(255, 255, 170) 20%, rgba(221,92,22,1) 80%);
 }
 
 .hero_stats{
   display: flex;
-  border: 2px solid rgb(46, 46, 26);
-  width: 100%;
-  height: 100%;
-  justify-content: flex-end;
+  width: 500px;
+  min-width: 500px;
+  max-width: 100%;
+  justify-content:center;
   align-items: flex-start;
 
 }
@@ -97,8 +151,9 @@
  flex-direction: column;
  justify-content: center;
  align-items: center;
- background: rgb(131,58,180);
- background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 49%, rgba(202,252,69,1) 100%);
+ text-align: center;
+ background: rgb(251,237,17);
+ background: linear-gradient(193deg, rgba(251,237,17,1) 14%, rgba(252,219,11,1) 42%, rgba(255,94,0,1) 55%);
   width: 100%;
   height: 100%;
 }
@@ -120,7 +175,7 @@
 
 .pokecards{
   width: min-content;
-
+  margin-top: 50px;
   /* border: 3px solid yellow; */
   display: grid;
   grid-template-columns: repeat(4, 4fr);
@@ -133,26 +188,51 @@
   font-size: 17px;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   align-items: center;
+position: relative;
+  z-index: 0;
+  padding: 15px;
   width: 250px;
-  border: 4px solid rgb(157, 157, 255);
-  background-image: linear-gradient(rgb(248, 241, 241), rgba(255, 255, 255, 0.8));
+  border: none;
+  /* background-image: linear-gradient(rgb(248, 241, 241), rgba(255, 255, 255, 0.8)); */
   color: black;
-  border-radius: 20px;
+ background-color: whitesmoke;
+ box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-.secondary{
-  background-image: linear-gradient(rgba(6, 107, 11, 0.589), rgba(25, 105, 68, 0.8), rgba(143, 228, 195, 0.8));
+.wallpaper {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('../src/assets/wallpaper.webp') no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.third{
-  background-image: linear-gradient(rgba(211, 0, 0, 0.822), rgba(213, 213, 213, 0.8));
+.arrow-set{
+  width: 0;
+  height: 0;
+  border-top: 70px solid rgba(227,227,239,1);
+  border-right: 70px solid transparent;
+  border-left: 0;
+  rotate: 226deg;
+
+}
+
+.arrow-set:hover{
+  -webkit-transform: rotateY(360deg);
+  transition: 5s ease-in-out;
+
 }
 
 .pokename{
   display: flex;
   flex-direction: row;
-  border: 1px solid springgreen;
+  /* border: 1px solid springgreen; */
   background-color: da;
   width: 300px;
   justify-content: space-around;
@@ -164,6 +244,7 @@
   background: url('./assets/coverball.png') no-repeat center;
   background-size: cover;
   border-radius: 50%;
+  object-fit: contain;
 }
 
 .data-set-poke{
@@ -184,8 +265,53 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin: 10px;
+  padding: 10px;
   align-items: center;
   width: 100%;
-  border: 3px solid springgreen;
+  /* border: 3px solid springgreen; */
 
+}
+
+.types{
+  
+  border: 1px solid rgb(231, 231, 231);
+  border-radius: 50%;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  width: 85px;
+  height: 55px;
+}
+
+/* .types.table {
+  width: 0;
+  height: 0;
+  background-color: none;
+} */
+
+.detail-triangle-left{
+  width: 0;
+  height: 0;
+  border-top: 70px solid rgb(42, 38, 38);
+  border-right: 70px solid transparent;
+  border-left: 0;
+}
+
+.detail-triangle-right{
+  width: 0;
+  height: 0;
+  border-bottom: 70px solid black;
+  border-left: 70px solid transparent;
+  border-right: 0;
+}
+
+.abilities-table{
+  
+  width: 500px;
+  height: 100%;
+ 
 }

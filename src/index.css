@@ -1,4 +1,4 @@
-.contenedorProgressBar{
+/* .contenedorProgressBar{
   position: fixed;
   float: right;
   bottom: 0;
@@ -16,4 +16,18 @@
 .progressText{
   text-align: center;
   display: grid;
+} */
+
+/*BARRA DE PROGRESO EN STATS POKEMON*/
+
+.contain_progress{
+  border: 3px solid maroon;
+  background-color: aquamarine;
+  width: 100%;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.table-types{
+  border: 2px solid yellow;
 }
