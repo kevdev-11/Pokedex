@@ -7,6 +7,7 @@ import Character from './components/Character';
 import CharacterDetails from './components/CharacterDetails';
 import ProtectedRoutes from './components/ProtectedRoutes';
 import Home from './components/Home';
+
 function App() {
 /////// *FORMA DE EJECUTAR EL DISPATCH: *
   // const dispatch = useDispatch();

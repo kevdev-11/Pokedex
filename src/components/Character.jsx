@@ -88,7 +88,7 @@ const Character = () => {
             placeholder='Select by type'
             // onChange={filterType}
             >
-                <option>All poketype</option>
+                <option style={{cursor:'pointer'}}>All poketype</option>
                 {type?.map(types=>   
                 <option 
                 style={{width:'90px'}}
